@@ -1,7 +1,7 @@
 # ralph admin url 文件源码详解
 
 ## 文件路径
-  ralph/admin/sites.py
+      ralph/admin/sites.py
 ## 源码内容
 
 
