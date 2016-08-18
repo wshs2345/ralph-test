@@ -4,10 +4,11 @@
   ralph/admin/sites.py
 ## 源码内容
 
-  # 导入模块
+
+    # 导入模块
   from collections import defaultdict
   from django.conf import settings
-  	# 来自于 django/conf/__init__.py 文件
+    # 来自于 django/c onf/__init__.py 文件
   from django.conf.urls import url
   from django.contrib.admin.sites import AdminSite
   
@@ -145,16 +146,16 @@
           extra_context['data_centers'] = DataCenter.objects.filter(
               show_on_dashboard=True
           )
-  		# DataCenter 是 ralph/data_center/models/phycisal.py 文件中的类
-  		# 该句代码意思： 将 DataCenter 类中所有对象，show_on_dashboard 属性为 True 的都过滤出来。
+  		    # DataCenter 是 ralph/data_center/models/phycisal.py 文件中的类
+  		    # 该句代码意思： 将 DataCenter 类中所有对象，show_on_dashboard 属性为 True 的都过滤出来。
   		
           return super().index(request, extra_context)
-  		# 重写父类的 index() 方法，调用当前类的 index() 方法，返回相应的值 
+  		    # 重写父类的 index() 方法，调用当前类的 index() 方法，返回相应的值 
   
   class RalphAdminSite(RalphAdminSiteMixin, AdminSite):
-  	# 定义一个新类，继承父类 RalphAdminSiteMixin 和 AdminSite
+  	  # 定义一个新类，继承父类 RalphAdminSiteMixin 和 AdminSite
       pass
   
   
   ralph_site = RalphAdminSite()
-  # 调用 RalphAdminSite 类
+      # 调用 RalphAdminSite 类
