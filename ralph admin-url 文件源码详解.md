@@ -151,6 +151,8 @@
       		
               return super().index(request, extra_context)
       		    # 重写父类的 index() 方法，调用当前类的 index() 方法，返回相应的值 
+      		    # 由于该方法是基于 object 对象调用的父类，经过分析该处的 index() 方法是调用
+      		    # RalphAdminSite 类的父类 AdminSite 中的index方法
       
       class RalphAdminSite(RalphAdminSiteMixin, AdminSite):
       	  # 定义一个新类，继承父类 RalphAdminSiteMixin 和 AdminSite
